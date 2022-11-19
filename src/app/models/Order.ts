@@ -1,13 +1,13 @@
 import { model, Schema, SchemaTypes } from "mongoose"
 
-export const Product = model('Product', new Schema({
-  name: {
+export const Order = model('Order', new Schema({
+  table: {
     type: String,
     required: true,
   },
   status: {
     type: String,
-    enum: ['WAITING, IN_PRODUCT, DONE',],
+    enum: ['WAITING', 'IN_PRODUCTION', 'DONE'],
     default: 'WAITING',
 
   },
